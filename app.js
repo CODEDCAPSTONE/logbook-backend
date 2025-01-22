@@ -32,6 +32,6 @@ app.use("/media", express.static(path.join(__dirname, "media")));
 app.use('/api/users', require('./apis/users/users.routes'));// changes done here 
 connectDB();
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(`The application is running on localhost:${PORT}`);
 });
